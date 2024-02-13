@@ -1,0 +1,46 @@
+main{
+    height: 80vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputsnv{
+    display: none;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    width: 50%;
+    max-width: 500px;
+    height: 30%;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.login .botonesLG{
+    display: flex;
+    gap: 5px;
+}
+
+.login .inputsv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 250px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}

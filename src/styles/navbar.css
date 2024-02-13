@@ -1,0 +1,79 @@
+header{
+    width: 100vw;
+    height: 10vh;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    height: 10vh;
+    min-height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+#hamburguesa{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+@media (width > 600px){
+    nav{
+        padding: 20px 50px 20px 50px;
+    }
+}
+
+@media (width < 480px){
+    nav{
+        padding: 0;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        padding: 10px;
+        background-color: black;
+        gap: 20px;
+        list-style: none;
+        font-size: 20px;
+        padding: 20px;
+    }
+    .ulNV{
+        display: none;
+    }
+    #hamburguesa{
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #hamburguesa img{
+        width: 50px;
+    }
+    nav button:focus-visible {
+        outline: 0px auto -webkit-focus-ring-color;
+      }
+}
