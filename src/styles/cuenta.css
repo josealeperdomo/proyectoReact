@@ -30,6 +30,10 @@ main{
     gap: 5px;
 }
 
+.seleccionado{
+    background-color: #6b6b6b;
+}
+
 .login .inputsv{
     display: flex;
     flex-direction: column;

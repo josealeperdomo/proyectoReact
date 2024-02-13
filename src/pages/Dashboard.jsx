@@ -59,7 +59,7 @@ export const Dashboard = ()=>{
                     <input type="text" name="nombre2" id="nombre2" placeholder={usuario.nombre} onChange={(e)=>setNombre2(e.target.value)}/>
                     <input type="text" name="apellido2" id="apellido2" placeholder={usuario.apellido} onChange={(e)=>setApellido2(e.target.value)}/>
                     <input type="text" name="email2" id="email2" value={usuario.email} onChange={(e)=>setEmail2(e.target.value)}/>
-                    <input type="submit" value="CAMBIAR NOMBRE Y/O APELLIDO" />
+                    <input className='inputSubmit' type="submit" value="CAMBIAR NOMBRE Y/O APELLIDO" />
                 </form>
                 <div className='botones'>
                     <NavLink to={'/dashboardPassword'}>

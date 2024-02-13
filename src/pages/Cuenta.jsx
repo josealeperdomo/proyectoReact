@@ -7,20 +7,19 @@ export const Cuenta = ()=>{
 
 //cambiar entre login y register==============
 
-    const login = ()=>{
-        const logeo = document.getElementById('inputsL')
-        const regist = document.getElementById('inputsR')
-        logeo.classList.toggle('inputsv', 'inputsnv')
-        regist.classList.replace('inputsv', 'inputsnv')
+    const [login,setLogin] = useState(true)
+    const [register,setRegister] = useState(false)
+
+    const mostrarLogin = ()=>{
+        setLogin(true)
+        setRegister(false)
     }
-    const register = ()=>{
-        const logeo = document.getElementById('inputsL')
-        const regist = document.getElementById('inputsR')
-        if(regist.className !== 'inputsnv inputsv'){
-            regist.classList.toggle('inputsv')
-            logeo.classList.toggle('inputsv')
-        }
+
+    const mostrarRegister = ()=>{
+        setLogin(false)
+        setRegister(true)
     }
+
     //cambiar entre login y register==============
 
     
@@ -222,20 +221,20 @@ export const Cuenta = ()=>{
         <main>
             <div className="login">
                 <div className='botonesLG'>
-                    <button onClick={login}>Register</button>
-                    <button onClick={register}>Login</button>
+                    <button className={login ? 'seleccionado' : 'noSeleccionado'} onClick={mostrarLogin}>Register</button>
+                    <button className={register ? 'seleccionado' : 'noSeleccionado'} onClick={mostrarRegister}>Login</button>
                 </div>
-                <form onSubmit={submit} id='inputsL' className='inputsv inputsnv'>
+                <form onSubmit={submit} id='inputsR' className={login ? 'inputsv' : 'inputsnv'}>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" onChange={(e)=>setNombre(e.target.value)}/>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" onChange={(e)=>setApellido(e.target.value)}/>
                     <input type="email" name="emailR" id="emailR" placeholder="ingrese su email" onChange={(e)=>setEmail(e.target.value)}/>
                     <input type="password" name="passwordR" id="passwordR" placeholder="Ingrese su contraseña" onChange={(e)=>setPassword(e.target.value)}/>
-                    <input type="submit" value="REGISTRAR"/>
+                    <input className='inputSubmit' type="submit" value="REGISTRAR"/>
                 </form>
-                <form onSubmit={submitLogin} id='inputsR' className='inputsnv'>
+                <form onSubmit={submitLogin} id='inputsL' className={register ? 'inputsv' : 'inputsnv'}>
                     <input type="email" name="emailL" id="emailL" placeholder="ingrese su email" onChange={(e)=>setEmailL(e.target.value)}/>
                     <input type="password" name="passwordL" id="passwordL" placeholder="Ingrese su contraseña" onChange={(e)=>setPasswordL(e.target.value)}/>
-                    <input type="submit" value="INICIAR SESION" />
+                    <input className='inputSubmit' type="submit" value="INICIAR SESION" />
                 </form>
             </div>
         </main>

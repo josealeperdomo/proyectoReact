@@ -84,7 +84,7 @@ export const DashboardPassword = ()=>{
                 <form  onSubmit={cambiarPassword} action="">
                     <input type="password" name="viejaClave" id="viejaClave" placeholder="ingrese su contraseña anterior" onChange={(e)=>setPasswordV(e.target.value)} />
                     <input type="password" name="nuevaClave" id="nuevaClave" placeholder="ingrese la nueva contraseña" onChange={(e)=>setPasswordN(e.target.value)}/>
-                    <input type="submit" value="Cambiar contraseña" />
+                    <input className='inputSubmit' type="submit" value="Cambiar contraseña" />
                 </form>
             </section>
         </main>
